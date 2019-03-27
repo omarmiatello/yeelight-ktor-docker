@@ -18,7 +18,13 @@ Grab via Gradle (v4 or later):
 implementation 'com.github.jacklt:yeelight-kt:1.0.0'
 ```
 
-## How to use - Sample
+## Examples: How to use
+
+### Sample
+
+**[build.gradle](demo/build.gradle)**
+
+**[Main.kt](demo/src/main/kotlin/Main.kt)**
 
     fun main() = runBlocking {
         println("Start search...")
@@ -29,8 +35,8 @@ implementation 'com.github.jacklt:yeelight-kt:1.0.0'
         }
         println("Finish!")
     }
-    
-### Result:
+
+**Result**:
 
     Start search...
     Found 2 devices:
@@ -41,3 +47,27 @@ implementation 'com.github.jacklt:yeelight-kt:1.0.0'
     192.168.85.25 --> {"method":"start_cf","params":[8,0,"500,1,16711680,100,200,7,0,0,500,1,255,100,200,7,0,0"],"id":1}
                   <-- {"id":1, "result":["ok"]}
     Finish!
+
+
+### Web server with [Ktor](https://ktor.io)
+
+**[build.gradle](demo-ktor-docker/build.gradle)**
+
+**[README.md](demo-ktor-docker/README.md)** (for Docker)
+
+You can start a local web server (`./gradlew run`) or use Docker for:
+
+Find devices
+```
+http://localhost:8080
+```
+
+Switch on/off devices (+ find devices if needed)
+```
+http://localhost:8080/toggle
+```
+
+Start "Police flow" (+ find devices if needed)
+```
+http://localhost:8080/police
+```
