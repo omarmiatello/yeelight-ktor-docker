@@ -1,4 +1,4 @@
-# yeelight-kt
+# yeelight-kt [Deprecated] new project https://github.com/omarmiatello/yeelight-kt
 Control your Xiaomi Yeelight lamp from Kotlin. Use ktor library for network.
 
 [![](https://jitpack.io/v/jacklt/yeelight-kt.svg)](https://jitpack.io/#jacklt/yeelight-kt)
