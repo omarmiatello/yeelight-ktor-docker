@@ -1,5 +1,6 @@
-# yeelight-kt [Deprecated] new project https://github.com/omarmiatello/yeelight-kt
-Control your Xiaomi Yeelight lamp from Kotlin. Use ktor library for network.
+# yeelight-ktor-docker demo project
+
+## NOTE: Yeelight API are moved to https://github.com/omarmiatello/yeelight
 
 [![](https://jitpack.io/v/jacklt/yeelight-kt.svg)](https://jitpack.io/#jacklt/yeelight-kt)
 
@@ -26,15 +27,20 @@ implementation 'com.github.jacklt:yeelight-kt:1.0.0'
 
 **[Main.kt](demo/src/main/kotlin/Main.kt)**
 
-    fun main() = runBlocking {
-        println("Start search...")
-        val devices = Yeelight.findDevices()
-        println("Found ${devices.size} devices:\n${devices.joinToString("\n")}")
-        devices.forEach { yeelight ->
-            yeelight.startFlowPolice()
-        }
-        println("Finish!")
+NOTE: NEW Yeelight API available here: https://github.com/omarmiatello/yeelight
+
+```kotlin
+// EXAMPLE DEPRECATED -- use: https://github.com/omarmiatello/yeelight
+fun main() = runBlocking {
+    println("Start search...")
+    val devices = Yeelight.findDevices()
+    println("Found ${devices.size} devices:\n${devices.joinToString("\n")}")
+    devices.forEach { yeelight ->
+        yeelight.startFlowPolice()
     }
+    println("Finish!")
+}
+```
 
 **Result**:
 
